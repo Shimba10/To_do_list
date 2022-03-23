@@ -1,0 +1,98 @@
+{%extends '../management/home.html'%}
+        
+{%block content%}
+<head>
+    <style>
+        body{
+                
+                
+                margin:0px;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .container{
+                display:flex;
+                
+                margin-top:7em;
+                justify-content: center;
+                
+               
+            }
+            .frm{
+                background-color: white;
+                border-radius: 25px;
+                display: flex;
+                flex-direction: column;
+                padding:20px;
+                margin:10px;
+            }
+
+            input{
+                margin: 20px;
+            }
+            
+            .btn{
+                margin-bottom:20px;
+                background-color: lightskyblue;
+                border-radius: 25px;
+                cursor: pointer;
+                padding:3px;
+                
+            }
+            .anchor{
+                text-decoration: none;
+                color:black;
+            }
+            .make-appoint1{
+                display:flex;
+                justify-content: center;
+                margin:12px;
+                
+            }
+            .appointment1{
+                text-decoration: none;
+                color:black;
+                padding: 12px;
+                font-size: 1.4em ;
+
+            }
+            .btn-btn{
+                
+                background-color: lightskyblue;
+                }
+            .btn1-btn1{
+                
+                
+                background-color: rgb(187, 78, 78);
+                
+             }
+            
+    </style>
+</head>
+<body>
+    <div class="container">
+        <table border="2">
+            <tr>
+                <th>Doctor</th>
+                <th>patient</th>
+                <th>number</th>
+                <th>date</th>
+                <th>time</th>
+            </tr>
+            {%for i in user1%}
+            <tr>
+                <td>{{i.doctor}}</td>
+                <td>{{i.patient}}</td>
+                <td>{{i.number}}</td>
+                <td>{{i.date}}</td>
+                <td>{{i.time}}</td>
+                <td><button type="submit" name="update" class="btn-btn"><a href="../updateAppointment/{{i.id}}" class="anchor">Update</a></button></td>
+                <td><button type="submit" name="delete" class="btn1-btn1"><a href="../deleteAppointment/{{i.id}}" class="anchor">Delete</a></button></td>
+            </tr>
+            {%endfor%}
+        </table>
+    </div>
+    <div class="make-appoint1">
+        <button type="submit" class="btn"><a href="../add_appointment/" class="appointment1">Make an appointment</a></button>
+    </div>
+</body>
+{%endblock%}
