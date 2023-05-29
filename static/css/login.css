@@ -1,0 +1,94 @@
+:root{
+    --primary-clr: #262626;
+    --secondary-clr: rgb(235, 233, 233);
+    --third-clr: #ffee10;
+}
+body{
+     background: var(--primary-clr);
+     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.label1{
+    color: var(--secondary-clr);
+    margin-right: 2em;
+    font-size: 1em ;
+}
+#form1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2em;
+    gap: 2em;
+}
+.to-do{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 6em;
+}
+.btn1{
+    border: 2px solid black;
+    background: var(--primary-clr);
+    color: var(--secondary-clr);
+    padding: 6px 10px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+.btn1:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 10px var(--third-clr);
+    text-shadow: 0 0 5px var(--third-clr);
+}
+.alpha{
+    color: var(--secondary-clr);
+    font-size: 4em;
+    text-shadow: 0 7px black;
+    transition: all 1s ease-in-out;
+    margin-left: 0.1em;
+}
+.alpha:hover{
+    color: var(--third-clr);
+    text-shadow: 0 7px #d92121;
+    animation: spring 1s ease;
+}
+@keyframes spring{
+    0%{
+        transform: scale(1.8,0.6);
+
+    }
+    10%{
+        transform: scale(1.65,0.55);
+    }
+  
+    40%{
+        transform: scale(1.20,0.85);
+    } 
+     
+    50%{
+        transform: scale(1,1);
+    }
+    60%{
+        transform: scale(1.25,0.65);
+    }
+    80%{
+        transform:scale(1,1);
+    }
+    90%{
+        transform:scale(1.10,0.90);
+    }
+    100%{
+        transform: scale(1,1);
+    }
+} 
+
+.to-do-1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2em;
+}
+.password-reset{
+    text-decoration: none;
+    color: var(--secondary-clr);
+    margin-bottom: 2em;
+}

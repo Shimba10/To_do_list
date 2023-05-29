@@ -1,0 +1,34 @@
+{% load static %}
+<!Doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width initial-scale=1">
+        <title>To-do-list</title>
+        <link rel="stylesheet" href="{% static 'css/signup.css' %}">
+        
+        
+        {%block extrahead%}
+        {%endblock%}
+    </head>
+    <body>
+        {% block content%}
+        <form method="post" name="frm" id="form">
+            <h1>Register</h1>
+            {% csrf_token %}
+            
+            {% for field in form %}
+                <div>
+                    <label class="label">{{field.label}}</label>
+                    <span class="span">{{field}}</span>
+                </div>
+            {%endfor%}
+
+            <input type="submit" class="btn" value="Register">
+            <p class="para">Already have an account?
+                <a class="anchor-log" href="{% url 'login' %}">Log In</a>
+            </p>
+        </form>
+        {%endblock%}
+    </body>
+</html>

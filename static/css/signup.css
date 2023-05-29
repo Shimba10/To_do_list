@@ -1,0 +1,56 @@
+:root{
+    --primary-clr: #262626;
+    --secondary-clr: rgb(235, 233, 233);
+    --third-clr: #ffee10;
+}
+body{
+    background: var(--primary-clr);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+#form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    margin: 10em;
+    
+}
+#form h1{
+    color: var(--secondary-clr);
+}
+.label{
+    font-size: 1em;
+    margin-right: 2em;
+    color: var(--secondary-clr);
+}
+#form h1:hover{
+    color: var(--third-clr);
+    
+    
+}
+.btn{
+    color: var(--secondary-clr);
+    padding: 8px;
+    border: 1px solid black;
+    
+    cursor: pointer;
+    background: var(--primary-clr);
+    transition: all  0.4s linear;
+}
+.btn:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 10px var(--third-clr);
+    text-shadow: 0 0 10px var(--third-clr);
+    color: var(--third-clr);
+}
+.para{
+    margin: -15px 0 -30px 0;
+    color: var(--secondary-clr);
+}
+.anchor-log{
+    text-decoration: none;
+    color: var(--secondary-clr);
+}
+.anchor-log:hover{
+    color: var(--third-clr);
+}

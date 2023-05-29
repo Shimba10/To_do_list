@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width initial-scale=1">
+        <title>to-do-list</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+        <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+        <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/> 
+        
+        <script src =  "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>    
+        <link rel="stylesheet" href="{% static 'css/main.css' %}">
+
+       {% block extrahead%}
+       {%endblock%}
+       
+    </head>
+    <body>
+            <div id="pointer"></div>
+            <nav class="nav">
+                <ul class="ul-li">
+                    <li class="li"><a class="anchor" href="">Home</a></li>
+                    <li class="li"><a class="anchor" href="">Contact</a></li>
+                    <li class="li"><a class="anchor" href="">{{request.user.username}}</a></li>
+                    <li class="li"><a class="anchor" href="">logout</a></li>
+                    
+                </ul>
+            </nav>
+        
+        {% block content%}
+        <script src="{% static 'js/main.js' %}"></script>
+        <div class="add-container">
+            <form method="post" id="form">
+                {% csrf_token %}
+                <input type="text" class="add" name="name">
+                <input type="submit" class="btn" value="ADD">
+            </form>
+        </div>
+        <input type="search" name="complaint_input" id="complaint_input">
+        <input type="submit" name="searchbtn" id="searchbtn" value="search">
+        <table id="to_do">
+            <thead>
+                <tr>
+                    <th>
+                        Task
+                    </th>
+                    <th>
+
+                    </th>
+                    <th>
+
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                   <td>
+                       hello
+                   </td>
+                   <td>update</td>
+                   <td>delete</td>
+                </tr>
+           
+                <tr>
+                   <td>
+                       konichiwa
+                   </td>
+                   <td>update</td>
+                   <td>delete</td>
+                </tr>
+            </tbody>
+        </table>
+        {%endblock%}
+    </body>
+</html>
